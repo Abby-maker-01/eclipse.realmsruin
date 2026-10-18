@@ -1,0 +1,16 @@
+{
+  "name": "eclipse-realms-of-ruin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ECLIPSE pixel RPG Android starter",
+  "scripts": {
+    "build": "echo Static web game ready"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}

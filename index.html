@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#090d18"><title>ECLIPSE: REALMS OF RUIN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+<header><div><small>ONLINE RPG • PIXEL FANTASY</small><h1>ECLIPSE <span>REALMS OF RUIN</span></h1></div><div class="header-buttons"><button id="musicBtn" aria-label="Aktifkan musik">♫ MUSIK OFF</button><button id="menuBtn">☰</button></div></header>
+<section class="hud">
+ <div class="avatar">✦</div><div class="player"><b id="playerName">Wanderer</b><small><span id="raceLabel">Human</span> • <span id="classLabel">Fighter</span> • <span id="rankLabel">E</span> Rank</small><div class="xp"><i id="xpBar"></i></div><small>LV <span id="level">1</span> · XP <span id="xp">0</span>/<span id="xpNeed">100</span></small></div>
+ <div class="vitals"><div>❤️ <b id="hp">120</b></div><div>🔷 <b id="mp">50</b></div><div>⚔️ <b id="power">12</b></div></div>
+</section>
+<main>
+ <section class="world-panel"><div class="world-title"><div><small>WILAYAH SAAT INI</small><h2 id="areaName">Hutan Senja</h2></div><span class="pill" id="weather">Gerimis astral</span></div>
+ <canvas id="world" width="720" height="440" aria-label="Dunia RPG yang dapat dijelajahi"></canvas>
+ <div class="world-foot"><span>📍 <b id="coords">12, 8</b></span><span id="worldHint">Jelajahi hutan, cari monster dan peti!</span></div>
+ </section>
+ <section class="actions">
+ <div class="section-heading"><h3>Petualangan</h3><span id="onlineStatus" class="offline">MODE LOKAL • ONLINE BELUM AKTIF</span></div>
+ <div class="action-grid">
+ <button data-action="quest">📜 <span>Quest</span></button><button data-action="hunt">👹 <span>Berburu</span></button><button data-action="inventory">🎒 <span>Inventori</span></button><button data-action="stats">📊 <span>Status</span></button><button data-action="classes">🌀 <span>Class</span></button><button data-action="travel">🗺️ <span>Wilayah</span></button><button data-action="craft">⚒️ <span>Crafting</span></button><button data-action="market">🪙 <span>Pasar</span></button>
+ </div>
+ <div id="notice" role="status">Selamat datang, petualang. Gunakan tombol arah untuk menjelajah.</div>
+ </section>
+ <section class="controls"><div class="dpad" aria-label="Kontrol gerak"><button data-move="up">▲</button><div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div><small>GERAK</small></div><div class="combat-buttons"><button class="skill" id="skill1">✦ SKILL I</button><button class="skill" id="skill2">❖ SKILL II</button><button class="attack" id="attackBtn">⚔ SERANG</button></div></section>
+ <nav><button class="selected">🌍<small>Dunia</small></button><button data-action="stats">🧬<small>Karakter</small></button><button data-action="quest">📜<small>Quest</small></button><button data-action="inventory">🎒<small>Item</small></button></nav>
+</main>
+</div>
+<dialog id="modal"><button class="close" id="closeModal">✕</button><div id="modalContent"></div></dialog>
+<script src="audio.js"></script>
+<script src="game.js"></script>
+</body></html>
